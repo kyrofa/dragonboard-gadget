@@ -1,8 +1,9 @@
-name: dragonboard
+name: dragonboard-turtlebot-kyrofa
 version: 16.04-0.18
-summary: Dragonboard support package
+summary: Dragonboard gadget for the Turtlebot 2
 description: |
- Support files for booting the 96boards dragonboard
+ This is a fork of the official Dragonboard gadget. It simply adds a
+ serial-port slot for the Turtlebot 2's Kobuki base.
 type: gadget
 architectures:
   - armhf
@@ -12,3 +13,11 @@ parts:
     prebuilt:
         plugin: dump
         source: prebuilt
+
+# Custom serial-port interface for the Turtlebot 2
+slots:
+    kobuki:
+        interface: serial-port
+        path: /dev/serial-port-kobuki
+        usb-vendor: 0x0403
+        usb-product: 0x6001
