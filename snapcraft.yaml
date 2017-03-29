@@ -6,7 +6,7 @@ description: |
  serial-port slot for the Turtlebot 2's Kobuki base.
 type: gadget
 architectures:
-  - armhf
+  - arm64
 confinement: strict
 grade: stable
 parts:
